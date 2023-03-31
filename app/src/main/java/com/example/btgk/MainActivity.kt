@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.btgk.adapter.ContactListAdapter
 import com.example.btgk.data.Contact
-import com.example.btgk.data.ContactDAO
 import com.example.btgk.data.ContactRepository
 import com.example.btgk.databinding.ActivityMainBinding
 
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var res: ContactRepository
-    private lateinit var adapter: ContactListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         res = ContactRepository(application)
-        val data: List<Contact> = res.getAll() as List<Contact>
+        val data: List<Contact> = res.getAll()
         val contactArrayList: ArrayList<Contact> = ArrayList()
 
         for (i in data.indices) {

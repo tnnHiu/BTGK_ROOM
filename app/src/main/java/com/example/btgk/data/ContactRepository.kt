@@ -3,7 +3,7 @@ package com.example.btgk.data
 import android.app.Application
 
 
-class ContactRepository(var application: Application) {
+class ContactRepository(private var application: Application) {
     private var db: ContactDatabase = ContactDatabase.getInstance(application)
 
     fun insert(contact: Contact?) {

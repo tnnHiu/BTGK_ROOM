@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.btgk.data.Contact
-import com.example.btgk.data.ContactDAO
 import com.example.btgk.data.ContactRepository
 import com.example.btgk.databinding.ActivityAddNewBinding
 
